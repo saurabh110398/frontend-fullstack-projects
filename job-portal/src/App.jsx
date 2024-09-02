@@ -11,7 +11,8 @@ import JobListing from './pages/JobListing'
 import MyJobs from './pages/MyJobs'
 import PostJob from './pages/PostJob'
 import JobPage from './pages/JobPage'
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
+import ProtectedRoutes from './components/Protected-Routes'
 
 function App() {
 
@@ -25,27 +26,53 @@ function App() {
         },
         {
           path: '/onboarding',
-          element: <Onboarding />,
+          element: (
+            <ProtectedRoutes>
+              <Onboarding />
+            </ProtectedRoutes>
+          ),
         },
         {
           path: '/jobs',
-          element: <JobListing />,
+          element:
+          (
+            <ProtectedRoutes>
+             <JobListing />
+            </ProtectedRoutes>
+          ) ,
         },
         {
           path: '/job/:id',
-          element: <JobPage />,
+          element: (
+            <ProtectedRoutes>
+              <JobPage />
+            </ProtectedRoutes>
+          ),
+        
         },
         {
           path: '/saved-job',
-          element: <SavedJobs />,
+          element:(
+            <ProtectedRoutes>
+              <SavedJobs />
+            </ProtectedRoutes>
+          ) ,
         },
         {
           path: '/post-job',
-          element: <PostJob />,
+          element:(
+            <ProtectedRoutes>
+             <PostJob />
+            </ProtectedRoutes>
+          ) ,
         },
         {
           path: '/my-job',
-          element: <MyJobs />,
+          element:(
+            <ProtectedRoutes>
+             <MyJobs />
+            </ProtectedRoutes>
+          ),
         },
 
 

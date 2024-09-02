@@ -23,3 +23,23 @@ npx shadcn-ui@latest init
 2. Install 
 accordion button carousel card drawer input label 
 radio-group select textarea
+
+
+3. Superbase setup
+ 3.1. .env file
+ 3.2. utils/superbase.js
+ 3.3. npm i @supabase/supabase-js
+
+4. Clerk user mgmt:
+  4.1. npm install @clerk/clerk-react 
+  4.2. .env file
+  4.3. main.jsx 
+  4.4. Dark mode: npm install @clerk/themes
+
+
+5. Connect Superbase with clerk 
+https://supabase.com/partners/integrations/clerk
+
+6. Icons
+From lucid react , downloaded along with shadcn ui.
+
