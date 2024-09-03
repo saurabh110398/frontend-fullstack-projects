@@ -43,3 +43,11 @@ https://supabase.com/partners/integrations/clerk
 6. Icons
 From lucid react , downloaded along with shadcn ui.
 
+7. React spinners: npm i react-spinners
+
+8. Markdown Editor: 
+npm i @uiw/react-md-editor
+
+9. React hook form with zod:
+npm i react-hook-form zod @hookform/resolvers
+
