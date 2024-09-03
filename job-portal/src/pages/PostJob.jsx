@@ -1,7 +1,7 @@
 import React from 'react'
 import { getCompanies } from "@/api/apiCompanies";
 import { addNewJob } from "@/api/apiJobs";
-// import AddCompanyDrawer from "@/components/add-company-drawer";
+import AddCompanyDrawer from "@/components/add-company-drawer";
 import { Button } from "@/components/ui/button";
 
 import { Input } from "@/components/ui/input";
@@ -65,6 +65,11 @@ const PostJob = () => {
     });
   };
 
+  useEffect(() => {
+    if (dataCreateJob?.length > 0) navigate("/jobs");
+  }, [loadingCreateJob]);
+
+  
   const {
     loading: loadingCompanies,
     data: companies,
@@ -75,7 +80,6 @@ const PostJob = () => {
     if (isLoaded) {
       fnCompanies();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded]);
 
   if (!isLoaded || loadingCompanies) {
@@ -152,6 +156,8 @@ const PostJob = () => {
           />
           {/* <AddCompanyDrawer fetchCompanies={fnCompanies} /> */}
         </div>
+        <AddCompanyDrawer fetchCompanies={fnCompanies} />
+
         {errors.location && (
           <p className="text-red-500">{errors.location.message}</p>
         )}

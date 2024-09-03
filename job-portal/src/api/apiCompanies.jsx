@@ -1,4 +1,4 @@
-import supabaseClient from "@/utils/supabase";
+import supabaseClient, { supabaseUrl } from "@/utils/supabase";
 
 
 export async function getCompanies(token) {
@@ -20,6 +20,8 @@ console.log('getcompanies called----------------');
 }
 
 export async function addNewCompany(token, _, companyData) {
+
+  console.log('-----------addNewCompany called----------------');
     const supabase = await supabaseClient(token);
   
     const random = Math.floor(Math.random() * 90000);
@@ -47,6 +49,8 @@ export async function addNewCompany(token, _, companyData) {
       console.error(error);
       throw new Error("Error submitting Companys");
     }
+
+    console.log('add new company data ::',data);
   
     return data;
   }
