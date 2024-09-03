@@ -1,3 +1,11 @@
+Tools: 
+1. Clerk
+2. Supabase.
+
+Tech Stack:
+1. Reactjs
+2. Tailwind CSS
+
 1. Shadcn UI
 npm install -D tailwindcss postcss autoprefixer
 
