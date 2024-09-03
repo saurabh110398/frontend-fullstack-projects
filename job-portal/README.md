@@ -1,10 +1,13 @@
-Tools: 
-1. Clerk
-2. Supabase.
+
 
 Tech Stack:
 1. Reactjs
 2. Tailwind CSS
+3. Shadcn UI
+4. Clerk
+5. Supabase.
+
+##Important dependencies
 
 1. Shadcn UI
 npm install -D tailwindcss postcss autoprefixer
